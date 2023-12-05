@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-io!&de9q#n5@8qki8ib@#spy7min!busgx2f!%-6zsv-4sjs)2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["orquito.pythonanywhere.com"]
 
 
 # Application definition
