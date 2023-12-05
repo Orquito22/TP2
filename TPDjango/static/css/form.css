@@ -1,0 +1,102 @@
+
+form {
+    background-color: black;
+    font-weight: 500;
+    color: white;
+    background-blend-mode: darken;
+    height: 30vh; /*@media*/
+    text-align: center;
+    align-items: center;
+
+}
+
+#titulo-contacto {
+    height: 20px;
+    color: white;
+    background-color: black;
+    font-size: 30px;
+    font-family: russo one;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.input_data {
+    border: transparent;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: 900;
+    outline: none;
+    text-align: center;
+}
+
+div label{
+    font-size: 25px; /*@media*/
+}
+
+form button {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    margin-top: 20px;
+
+}
+
+form button.active,
+form button:hover {
+
+    background: #1b9bff;
+    transition: .5s;
+}
+
+@media (max-width: 1200px){
+    form {
+      
+        height: 30vh; /*@media*/
+        
+    } 
+}
+@media (max-width: 900px){
+    form {
+       height: 19vh; /*@media*/
+    } 
+    div label{
+        font-size: 12px; /*@media*/
+    }
+    form button {
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+    #titulo-contacto {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 400px){
+    form {
+        height: 15vh; /*@media*/
+     }
+
+     div label{
+         font-size: 6px; /*@media*/
+     }
+     form button {
+        font-size: 5px;
+        text-transform: uppercase;
+        padding: 3px 3px;
+        border-radius: 3px;
+        margin-top: 5px;
+     }
+     #titulo-contacto {
+         font-size: 15px;
+         margin-top: 10px;
+         margin-bottom: 0px;
+     }
+    div.form{
+        height: 18px;
+    }
+}

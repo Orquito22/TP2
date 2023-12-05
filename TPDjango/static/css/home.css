@@ -1,0 +1,93 @@
+#home.section {
+    margin-top: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 70vh; 
+    padding: 0 20px; 
+}
+ 
+
+#titulo1 {
+    font-family: 'Bungee Shade', sans-serif;
+    width: 50%;
+    font-size: 4.5vw;
+    text-align: center;
+    background-color: black;
+    color: white;
+
+}
+.texto-home {
+    font-family: 'bungee', sans-serif;
+    font-size: 1.9vw;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    width: 50%;
+    text-align: center;
+}
+
+
+
+#logosag {
+    width: 45vw;
+    height: 70vh;
+    
+    border: black;
+    
+}
+
+@media (max-width: 1200px ){
+    #home.section {
+        margin-top: 80px;
+        height: 55vh; /* Media*/
+    }
+   
+    #titulo1 {
+        font-size: 3.7vw; /*Media*/
+    }
+    .texto-home {   
+        font-size: 1.7vw;
+     }
+    #logosag {
+        width: 45vw;
+        height: 55vh;   
+    }
+}
+
+@media (max-width: 900px ){
+    #home.section {
+        margin-top: 80px;
+        height: 45vh; /* Media*/
+    }
+   
+    #titulo1 {
+        font-size: 3.7vw; /*Media*/
+    }
+    .texto-home {   
+        font-size: 1.7vw;
+     }
+    #logosag {
+        width: 45vw;
+        height: 45vh;   
+    }
+}
+
+@media (max-width: 400px){
+    #home.section {
+        margin-top: 40px;
+        height: 23vh; /* Media*/
+    }
+   
+    #titulo1 {
+        font-size: 4.5vw; /*Media*/
+    }
+    .texto-home {   
+        font-size: 2.2vw;
+     }
+    #logosag {
+        width: 45vw;
+        height: 45vh;   
+    }
+}
+

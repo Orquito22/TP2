@@ -1,0 +1,110 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- cambios en rama 1 -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAG</title>
+  <link rel="stylesheet" href="{% static './css/style.css' %}" />
+  <script src="https://kit.fontawesome.com/9141131fc3.js" crossorigin="anonymous"></script>
+  <script src= "{% static './js/index.js' %}" type="module"></script>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <section class="section">
+
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+
+      <label class="logo">SAG</label>
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#nosotros">NOSOTROS</a></li>
+        <li><a href="#resenias">RESEÑAS</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- HOME -->
+
+  <section class="section" id="home">
+   
+    <h1 id="titulo1">¡BIENVENIDXS!</h1>
+    <p class="texto-home">
+      sag estudio tiene mucho diseño para ofrecerte
+      y nuestra misión es potenciar el crecimiento de tu negocio.
+      <br>🚀✨
+    </p>
+    <img src= "{% static '.\media\imagenes\logosag.svg' %}" id="logosag" alt="">
+   
+  </section>
+
+  <!-- NOSOTROS -->
+
+  <section class="section" id="nosotros">
+    
+    <div id="div-nosotros" class="caja">
+    <i class="fa fa-magic fa-spin" id="magic"></i>
+    <button id="cambiarFondo"> MAGIA</button>
+
+
+    </div>
+
+  </section>
+
+  <section class="section" id="resenias">
+    <li class="menu-item">
+      <a class="menu-link" href="{% url 'resenia:resenia' %}">RESEÑAS DE CLIENTES</a>
+    </li>
+  </section>
+
+  <!-- CONTACTO -->
+
+  <section class="section" id="contacto">
+    <div id="titulo-contacto">CONTACTO</div>
+    <form>
+
+
+      <div class="form">
+        <label>NOMBRE</label><input type="text" name="nombre" class="input_data" />
+      </div>
+      <div class="form">
+        <label>EMAIL</label><input type="email" name="mail" class="input_data" />
+      </div>
+      <div class="form">
+        <label>WHATSAPP</label>
+        <input type="text" name="celular" class="input_data" />
+      </div>
+      <div class="form">
+        <label for="mensaje">DEJANOS TU MENSAJE:</label>
+        <textarea name="mensaje" rows="1" cols="20" class="input_data"></textarea>
+      </div>
+      <button type="submit">ENVIAR DATOS</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div id="icono-insta">
+      <a href="https://www.instagram.com/estudio_sag/" class="instagram">
+        <i class="fa-brands fa-instagram fa-bounce"></i></a>
+    </div>
+    <div id="footer-text">
+      <p id="nomb-footer">SAG</p>
+      <p id="est">est. 2022</p>
+
+    </div>
+  </footer>
+  
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div>
+          <h1>Reseñas de clientes</h1>
+          <h2><a href="{% url 'resenia:create' %}">Escribir nueva reseña</a></h2>
+          <div class="list">
+            {% for resenia in resenia_list %}
+            <fieldset>
+              <legend>Nombre: {{resenia.nombre}}</legend>
+              <ul>
+                <li>Nombre de la empresa : {{resenia.empresa}}</li>
+                <li>Calificación: {{resenia.calificacion}}</li>
+                <li>Reseña: {{resenia.resenia}}</li>
+                <li>Fecha: {{resenia.fecha}}</li>
+              </ul>
+      
+               
+                <div>
+                    <label for="">Borrar: </label>
+                    <a href="{% url 'resenia:delete' pk=resenia.pk %}">❌</a>
+                </div>
+                <div>
+                    <label for="">Editar: </label>
+                    <a href="{% url 'resenia:edit' pk=resenia.pk %}">📋</a>
+                </div>
+            </fieldset>
+            {% endfor %}
+          </div>
+      
+        </div>
+      </main>
+      <h2><a href="{% url 'index' %}">Volver</a></h2>
+</body>
+</html>
