@@ -41,3 +41,19 @@ body {
     text-align: center;
     margin: 5px;
 }
+
+#resenia{
+    
+    height: 60vh;
+    
+    
+}
+
+.botonres{
+    background-color: black;
+    color: white;
+    font-size: 60px;
+    border-radius: 10px;
+    font-family: bungee shade;
+    margin-top: 90px;
+}
