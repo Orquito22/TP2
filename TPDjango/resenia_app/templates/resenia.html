@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Montserrat&family=Russo+One&display=swap');
+
+    body {
+      font-family: Montserrat;
+      background-color: black;
+    }
+
+    .titulo {
+      font-family: russo one;
+      color: white;
+    }
+  </style>
+
+  <title>Document</title>
 </head>
+
 <body>
-    <main>
-        <div>
-          <h1>Reseñas de clientes</h1>
-          <h2><a href="{% url 'resenia:create' %}">Escribir nueva reseña</a></h2>
-          <div class="list">
-            {% for resenia in resenia_list %}
-            <fieldset>
-              <legend>Nombre: {{resenia.nombre}}</legend>
-              <ul>
-                <li>Nombre de la empresa : {{resenia.empresa}}</li>
-                <li>Calificación: {{resenia.calificacion}}</li>
-                <li>Reseña: {{resenia.resenia}}</li>
-                <li>Fecha: {{resenia.fecha}}</li>
-              </ul>
-      
-               
-                <div>
-                    <label for="">Borrar: </label>
-                    <a href="{% url 'resenia:delete' pk=resenia.pk %}">❌</a>
-                </div>
-                <div>
-                    <label for="">Editar: </label>
-                    <a href="{% url 'resenia:edit' pk=resenia.pk %}">📋</a>
-                </div>
-            </fieldset>
-            {% endfor %}
+  <main>
+    <div>
+      <h1 class="titulo">Reseñas de clientes</h1>
+      <h2><a href="{% url 'resenia:create' %}">ESCRIBIR NUEVA RESEÑA</a></h2>
+      <div class="list">
+        {% for resenia in resenia_list %}
+
+        <div class="card">
+          <div class="card-header">
+            <h5>
+              Nombre: {{resenia.nombre}}
+            </h5>
           </div>
-      
+          <div class="card-body">
+            <h5 class="card-title">Calificación: {{resenia.calificacion}}</h5>
+            <p class="card-text">
+              <li>Nombre de la empresa : {{resenia.empresa}}</li>
+              <li>Reseña: {{resenia.resenia}}</li>
+              <li>Fecha: {{resenia.fecha}}</li>
+            </p>
+            <a href="{% url 'resenia:delete' pk=resenia.pk %}" class="btn btn-primary">Borrar: ❌</a>
+            <a href="{% url 'resenia:edit' pk=resenia.pk %}" class="btn btn-primary">Editar: 📋</a>
+          </div>
         </div>
-      </main>
-      <h2><a href="{% url 'index' %}">Volver</a></h2>
+
+        {% endfor %}
+      </div>
+
+    </div>
+  </main>
+  <h2><a href="{% url 'index' %}" class="btn btn-primary">Volver</a></h2>
 </body>
+
 </html>
