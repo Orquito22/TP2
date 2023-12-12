@@ -1,7 +1,7 @@
 #nosotros.section {
     height: 70vh;
     position: relative;
-    background-image: url(".\media\imagenes\fondo1.svg");
+    background-image: url('/static/media/imagenes/fondo1.svg');
     background-size: 75%;
     background-color: #F26D7E;
     background-position: left;
@@ -10,7 +10,7 @@
 }
 
 #nosotros.section.fondo-2 {
-    background-image: url(".\media\imagenes\fondo2.svg");
+    background-image: url('/static/media/imagenes/fondo2.svg');
     background-color: #B600E0;
 }
 
